@@ -1,9 +1,10 @@
 {
-  "name": "discordbot",
+  "name": "funaio",
   "version": "1.0.0",
   "description": "",
   "main": "bot.js",
   "dependencies": {
+    "@discordjs/rest": "^1.0.1",
     "async": "^3.2.4",
     "cjopus": "^0.0.4",
     "color": "^3.2.1",
@@ -41,7 +42,8 @@
     "ws": "^1.1.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node bot.js",
+    "devStart": "nodemon bot.js"
   },
   "repository": {
     "type": "git",
@@ -53,5 +55,8 @@
   "bugs": {
     "url": "https://github.com/russellrigor/test/issues"
   },
-  "homepage": "https://github.com/russellrigor/test#readme"
+  "homepage": "https://github.com/russellrigor/test#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
