@@ -4,11 +4,6 @@ const { token } = require('./config.json');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-
-client.once('ready', () => {
-	console.log('ready 2 go');
-});
-
 const { SlashCommandBuilder, Routes } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { clientId, guildId, token } = require('./config.json');
@@ -39,5 +34,9 @@ rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
             await interaction.reply('User info.');
         }
     });
+
+client.once('ready', () => {
+    console.log('ready 2 go');
+});    
 // Login to Discord with your client's token
 client.login(token);
